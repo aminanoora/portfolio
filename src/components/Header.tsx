@@ -76,7 +76,7 @@ function Header() {
         visible ? 'is-visible' : ''
       }`}
     >
-      <div className="h-20 w-full px-margin flex items-center justify-between gap-gutter reveal reveal-top">
+      <div className="h-20 w-full px-margin-mobile md:px-margin flex items-center justify-between gap-gutter reveal reveal-top">
         <div className="flex items-center gap-space-sm">
           <img
             alt="Studio Zine Emblem"
