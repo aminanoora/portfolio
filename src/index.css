@@ -1,0 +1,446 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Colors */
+  --color-on-error-container: #93000a;
+  --color-on-secondary: #ffffff;
+  --color-surface-variant: #e5e2db;
+  --color-on-tertiary-container: #738a6b;
+  --color-primary-fixed: #e5e2e1;
+  --color-tertiary-container: #0c2009;
+  --color-tertiary: #000000;
+  --color-error: #ba1a1a;
+  --color-on-background: #1c1c18;
+  --color-surface: #fcf9f2;
+  --color-surface-bright: #fcf9f2;
+  --color-secondary: #685d4c;
+  --color-surface-container-highest: #e5e2db;
+  --color-primary-fixed-dim: #c8c6c5;
+  --color-primary-container: #1c1b1b;
+  --color-inverse-on-surface: #f3f0ea;
+  --color-surface-container-high: #ebe8e1;
+  --color-background: #fcf9f2;
+  --color-on-tertiary-fixed: #0c2009;
+  --color-tertiary-fixed-dim: #b4ceab;
+  --color-on-surface-variant: #444748;
+  --color-on-tertiary-fixed-variant: #374c31;
+  --color-inverse-surface: #31312c;
+  --color-surface-container: #f0eee7;
+  --color-on-primary-fixed-variant: #474746;
+  --color-on-error: #ffffff;
+  --color-secondary-fixed: #f0e0ca;
+  --color-secondary-fixed-dim: #d3c4af;
+  --color-tertiary-fixed: #d0eac5;
+  --color-on-secondary-fixed: #221a0d;
+  --color-on-secondary-container: #6e6351;
+  --color-outline: #747878;
+  --color-on-secondary-fixed-variant: #4f4535;
+  --color-on-primary-fixed: #1c1b1b;
+  --color-surface-tint: #5f5e5e;
+  --color-surface-container-low: #f6f3ec;
+  --color-error-container: #ffdad6;
+  --color-surface-container-lowest: #ffffff;
+  --color-secondary-container: #f0e0ca;
+  --color-on-tertiary: #ffffff;
+  --color-on-primary-container: #858383;
+  --color-inverse-primary: #c8c6c5;
+  --color-on-primary: #ffffff;
+  --color-primary: #000000;
+  --color-on-surface: #1c1c18;
+  --color-outline-variant: #c4c7c7;
+  --color-surface-dim: #dcdad3;
+
+  /* Border radius */
+  --radius: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  /* Spacing */
+  --spacing-gutter-mobile: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-margin: 2.5rem;
+  --spacing-space-2xl: 4rem;
+  --spacing-space-sm: 0.5rem;
+  --spacing-space-md: 1rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-space-xs: 0.25rem;
+  --spacing-space-xl: 2.5rem;
+  --spacing-margin-mobile: 1.25rem;
+
+  /* Font families */
+  --font-body-sm: 'Plus Jakarta Sans', sans-serif;
+  --font-body-md: 'Plus Jakarta Sans', sans-serif;
+  --font-body-lg: 'Plus Jakarta Sans', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-display-mobile: 'Space Grotesk', sans-serif;
+  --font-headline-lg: 'Space Grotesk', sans-serif;
+  --font-headline-lg-mobile: 'Space Grotesk', sans-serif;
+  --font-headline-md: 'Space Grotesk', sans-serif;
+  --font-headline-sm: 'Space Grotesk', sans-serif;
+  --font-label-lg: 'Space Grotesk', sans-serif;
+  --font-label-md: 'Space Grotesk', sans-serif;
+  --font-label-sm: 'Space Grotesk', sans-serif;
+
+  /* Font sizes */
+  --text-body-sm: 13px;
+  --text-body-sm--line-height: 20px;
+  --text-body-sm--letter-spacing: 0.01em;
+  --text-body-sm--font-weight: 400;
+
+  --text-display: 64px;
+  --text-display--line-height: 72px;
+  --text-display--letter-spacing: -0.03em;
+  --text-display--font-weight: 700;
+
+  --text-display-mobile: 40px;
+  --text-display-mobile--line-height: 46px;
+  --text-display-mobile--letter-spacing: -0.02em;
+  --text-display-mobile--font-weight: 700;
+
+  --text-label-sm: 10px;
+  --text-label-sm--line-height: 14px;
+  --text-label-sm--letter-spacing: 0.08em;
+  --text-label-sm--font-weight: 600;
+
+  --text-headline-lg: 40px;
+  --text-headline-lg--line-height: 48px;
+  --text-headline-lg--letter-spacing: -0.02em;
+  --text-headline-lg--font-weight: 600;
+
+  --text-headline-lg-mobile: 28px;
+  --text-headline-lg-mobile--line-height: 34px;
+  --text-headline-lg-mobile--letter-spacing: -0.01em;
+  --text-headline-lg-mobile--font-weight: 600;
+
+  --text-headline-md: 28px;
+  --text-headline-md--line-height: 36px;
+  --text-headline-md--letter-spacing: -0.01em;
+  --text-headline-md--font-weight: 600;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--letter-spacing: 0em;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md: 15px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--letter-spacing: 0.01em;
+  --text-body-md--font-weight: 400;
+
+  --text-headline-sm: 20px;
+  --text-headline-sm--line-height: 28px;
+  --text-headline-sm--letter-spacing: 0em;
+  --text-headline-sm--font-weight: 600;
+
+  --text-label-lg: 14px;
+  --text-label-lg--line-height: 18px;
+  --text-label-lg--letter-spacing: 0.04em;
+  --text-label-lg--font-weight: 600;
+
+  --text-label-md: 12px;
+  --text-label-md--line-height: 16px;
+  --text-label-md--letter-spacing: 0.06em;
+  --text-label-md--font-weight: 500;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    overscroll-behavior: none;
+  }
+
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Scroll-reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s cubic-bezier(0.2, 0.9, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Subtler variants for chrome elements (header / footer) */
+.reveal-top {
+  transform: translateY(-16px);
+}
+
+.reveal-subtle {
+  transform: translateY(16px);
+}
+
+.is-visible .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+/* ------------------------------------------------------------------
+   Motion layer
+   All transforms here animate the `transform` property, while the
+   layout rotations come from Tailwind's `rotate` utility, so the two
+   compose instead of fighting each other.
+   ------------------------------------------------------------------ */
+
+@keyframes word-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.5em) rotate(1.2deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes tape-sway {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1.2deg);
+  }
+  50% {
+    transform: translateY(-2px) rotate(1.2deg);
+  }
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes stamp-in {
+  0% {
+    opacity: 0;
+    transform: scale(1.45) rotate(-7deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(0.97) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes grow-x {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes status-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes dot-blink {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Word-by-word headline entrance */
+.word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.5em);
+  will-change: opacity, transform;
+}
+
+.is-visible .word {
+  animation: word-in 0.75s cubic-bezier(0.2, 0.9, 0.25, 1) both;
+  animation-delay: calc(120ms + var(--i, 0) * 70ms);
+}
+
+/* Paper and tape that never quite sits still */
+.tape-sway {
+  animation: tape-sway 5.5s ease-in-out infinite;
+}
+
+.tape-sway-alt {
+  animation: tape-sway 6.6s ease-in-out -2.2s infinite;
+}
+
+.float-slow {
+  animation: float-y 7s ease-in-out infinite;
+}
+
+.stamp-in {
+  opacity: 0;
+}
+
+.is-visible .stamp-in {
+  animation: stamp-in 0.62s cubic-bezier(0.2, 0.9, 0.25, 1) 0.4s both;
+}
+
+/* Rules that draw themselves in once their section is in view */
+.accent-dash,
+.rule-draw {
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.is-visible .accent-dash {
+  animation: grow-x 0.55s cubic-bezier(0.2, 0.9, 0.25, 1) 0.1s both;
+}
+
+.is-visible .rule-draw {
+  animation: grow-x 0.85s cubic-bezier(0.2, 0.9, 0.25, 1) 0.28s both;
+}
+
+/* Nav underline that wipes in from the left */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.125rem;
+  height: 2px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.25, 1);
+  pointer-events: none;
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after,
+.nav-link.is-current::after {
+  transform: scaleX(1);
+}
+
+/* Infinite paper-strip ticker */
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 38s linear infinite;
+}
+
+.ticker:hover .ticker-track,
+.ticker:focus-within .ticker-track {
+  animation-play-state: paused;
+}
+
+/* Live dot used in the header / ticker */
+.dot-blink {
+  animation: dot-blink 2.4s ease-in-out infinite;
+}
+
+/* Inline form feedback */
+.status-in {
+  animation: status-in 0.35s ease-out both;
+}
+
+/* Hover lift for pinned paper cards (matches the scrapbook shadow) */
+.card-lift {
+  transition:
+    transform 0.3s cubic-bezier(0.2, 0.9, 0.25, 1),
+    box-shadow 0.3s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 5px 8px 0 rgb(26 26 26 / 0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .word {
+    opacity: 1;
+    transform: none;
+  }
+
+  .is-visible .word,
+  .is-visible .accent-dash,
+  .is-visible .rule-draw,
+  .is-visible .stamp-in,
+  .tape-sway,
+  .tape-sway-alt,
+  .float-slow,
+  .stamp-in,
+  .status-in,
+  .dot-blink,
+  .ticker-track {
+    animation: none;
+  }
+
+  .accent-dash,
+  .rule-draw {
+    transform: none;
+  }
+
+  .stamp-in {
+    opacity: 1;
+  }
+
+  .ticker-track {
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  .ticker-track .ticker-copy {
+    display: none;
+  }
+
+  .card-lift:hover {
+    transform: none;
+  }
+}
